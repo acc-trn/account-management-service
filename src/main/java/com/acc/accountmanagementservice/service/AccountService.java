@@ -13,7 +13,7 @@ public interface AccountService {
 
     APIResponse<AccountDto> updateAccount(Long id, AccountDto accountDto);
 
-    APIResponse<Void> deleteAccount(Long id);
+    APIResponse<String> deleteAccount(Long id);
 
     APIResponse<AccountDto> updateBalance(Long id, Double newBalance);
 
