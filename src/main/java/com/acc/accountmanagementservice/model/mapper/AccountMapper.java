@@ -14,8 +14,8 @@ public interface AccountMapper extends APIResponseMapper<Account, AccountDto> {
     AccountMapper INSTANCE = Mappers.getMapper(AccountMapper.class);
 
     @Override
-    @Mapping(source = "bankAccounts", target = "bankAccountDtos")
-    @Mapping(source = "creditCards", target = "creditCardDtos")
+    @Mapping(source = "bankAccounts", target = "bankAccounts")
+    @Mapping(source = "creditCards", target = "creditCards")
     AccountDto modelToDto(Account account);
 
     List<AccountDto> modelsToDtos(List<Account> accounts);
