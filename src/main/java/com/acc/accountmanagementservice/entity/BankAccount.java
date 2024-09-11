@@ -11,7 +11,7 @@ import org.springframework.data.annotation.Id;
 @NoArgsConstructor
 @Entity
 @Table(name = "mst_bank_account")
-public class BankAccount {
+public class BankAccount extends AuditingEntity<String> {
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)

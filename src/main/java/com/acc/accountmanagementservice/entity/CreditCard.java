@@ -11,7 +11,7 @@ import org.springframework.data.annotation.Id;
 @NoArgsConstructor
 @Entity
 @Table(name = "mst_credit_card")
-public class CreditCard {
+public class CreditCard extends AuditingEntity<String> {
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)

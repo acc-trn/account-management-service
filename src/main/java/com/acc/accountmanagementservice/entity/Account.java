@@ -13,7 +13,7 @@ import java.util.List;
 @NoArgsConstructor
 @Entity
 @Table(name = "mst_account")
-public class Account {
+public class Account extends AuditingEntity<String> {
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
