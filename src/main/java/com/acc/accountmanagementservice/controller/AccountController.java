@@ -41,7 +41,7 @@ public class AccountController {
         return new ResponseEntity<>(response, HttpStatus.NO_CONTENT);
     }
 
-    @PatchMapping("/{id}/balance")
+    @PutMapping("/{id}/balance")
     public ResponseEntity<APIResponse<AccountDto>> updateBalance(@PathVariable Long id, @RequestParam Double newBalance) {
         APIResponse<AccountDto> response = accountService.updateBalance(id, newBalance);
         return new ResponseEntity<>(response, HttpStatus.OK);
